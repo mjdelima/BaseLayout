@@ -21,27 +21,37 @@ const breadcrumbs: BreadcrumbItem[] = [
 
     <AppLayout :breadcrumbs="breadcrumbs">
         <div class="flex h-full flex-1 flex-col gap-4 rounded-xl p-4">
-            <div class="grid auto-rows-min gap-4 md:grid-cols-3">
+            <!-- Grid for charts with equal heights -->
+            <div class="grid grid-rows-2 md:grid-cols-3 md:grid-rows-1 gap-4">
+                <!-- PieChart -->
                 <div
-                    class="relative aspect-video overflow-hidden rounded-xl border border-sidebar-border/70 dark:border-sidebar-border">
+                    class="relative overflow-hidden rounded-xl border border-sidebar-border/70 dark:border-sidebar-border flex">
 
-                    <PieChart />
-
-                </div>
-                <div
-                    class="relative aspect-video overflow-hidden rounded-xl border border-sidebar-border/70 dark:border-sidebar-border">
-                    <AreaChart />
+                    <PieChart class="w-full h-full" />
 
                 </div>
+                <!-- AreaChart -->
                 <div
-                    class="relative aspect-video overflow-hidden rounded-xl border border-sidebar-border/70 dark:border-sidebar-border">
-                    <SampleData />
+                    class="relative overflow-hidden rounded-xl border border-sidebar-border/70 dark:border-sidebar-border flex">
+
+                    <AreaChart class="w-full h-full" />
+
+                </div>
+                <!-- SampleData -->
+                <div
+                    class="relative overflow-hidden rounded-xl border border-sidebar-border/70 dark:border-sidebar-border flex">
+
+                    <SampleData class="w-full h-full" />
+
                 </div>
             </div>
-            <div
-                class="relative min-h-[100vh] flex-1 rounded-xl border border-sidebar-border/70 dark:border-sidebar-border md:min-h-min">
-                <BarChart />
+            <!-- BarChart -->
+            <div class="relative flex-1 rounded-xl border border-sidebar-border/70 dark:border-sidebar-border flex">
+
+                <BarChart class="w-full h-full" />
+
             </div>
         </div>
     </AppLayout>
+
 </template>
