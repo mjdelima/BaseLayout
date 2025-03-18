@@ -53,7 +53,7 @@ return [
 
         'mysql2' => [
             'driver'         => 'mysql',
-            'url'            => env('DB_URL'),
+            'url'            => env('DB2_URL'),
             'host'           => env('DB2_HOST', '127.0.0.1'),
             'port'           => env('DB2_PORT', '3306'),
             'database'       => env('DB2_DATABASE', 'laravel'),
