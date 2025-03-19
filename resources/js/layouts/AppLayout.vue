@@ -12,11 +12,21 @@ withDefaults(defineProps<Props>(), {
 });
 </script>
 
+
 <template>
-    <AppLayout :breadcrumbs="breadcrumbs">
-        <slot />
-        <footer>
+    <div class="flex flex-col min-h-screen">
+        <header>
+            <slot name="header"></slot>
+        </header>
+
+        <main class="flex-1">
+            <AppLayout :breadcrumbs="breadcrumbs">
+                <slot />
+            </AppLayout>
+        </main>
+
+        <footer class="mt-auto w-full">
             <FooterMenu />
         </footer>
-    </AppLayout>
+    </div>
 </template>
